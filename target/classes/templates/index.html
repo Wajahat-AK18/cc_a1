@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>FAST NU Assignment</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        #wrapper {
+            width:400px;
+            background-color: honeydew;
+            padding: 10px;
+            margin: 0 auto 0 auto;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id ="wrapper">
+        <p> FAST-NU Assignment </p>
+        <center>
+            <form>
+                Val 1:<br />
+                <input type="text" name="val1" />
+                <br /><br />
+                Val 2:<br />
+                <input type="text" name="val2" />
+
+                <br /><br />
+                <input type="radio" name="mathType" value="plus"/>+<br/>
+                <input type="radio" name="mathType" value="minus"/>-<br/>
+                <input type="radio" name="mathType" value="multiply"/> *<br />
+<input type="radio" name="mathType" value="divide"/> /
+                <br />
+<br />
+                <input type="submit" value="Submit" />
+                <div th:if="${svar} != null">
+                    <p th:text= "'Result is : ' + ${svar}"/>
+                </div>
+            </form>
+        </center>
+    </div>
+</body>
+</html>
